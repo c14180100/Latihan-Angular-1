@@ -11,14 +11,19 @@ export class AppComponent  {
   a = 0; b = 0;
   x = 0; y = 0;
   total = [];
-  totals;
+  hasil = 0;
   str = "";
 
   clear(){
-    
+    this.total = [];
+    this.a = 0;
+    this.b = 0;
+    this.hasil = 0;
   }
 
   calc(){
+    this.hasil = Math.pow(this.a,this.b);
+
     if(Math.pow(this.a,this.b) % 2 == 1){
       var x = this.a;
       var y = this.b;
