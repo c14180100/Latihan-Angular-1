@@ -2,15 +2,25 @@
 
 
 <label for="a">Bilangan 1</label> &nbsp;
-<input [(ngModel)]="a" type="text" id="a">
+<input [(ngModel)]="a" type="number" id="a">
 
-<br>
+<br><br>
 
 <label for="a">Bilangan 2</label> &nbsp;
-<input [(ngModel)]="b" type="text" id="b">
+<input [(ngModel)]="b" type="number" id="b">
 
-<br>
+<br><br>
 
-<button type="reset">Clear</button>
+<button type="reset" (click)="clear()">Clear</button>
 
+<br><br>
 
+<button (click)="calc()">Calculate</button>
+
+<br><br>
+
+{{total}}
+
+<div *ngFor="let data of total">
+  {{data}}
+</div>
